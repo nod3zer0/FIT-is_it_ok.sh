@@ -1,4 +1,4 @@
-# is_it_ok.sh (ISA-version)
+# ISA-is_it_ok.sh
 
 This is edited version of original script from IPP written by Ing. Zbynek Krivka Ph.D.
 This script is used for checking if submitted archive has all formal requirements.
@@ -20,7 +20,31 @@ This script is used for checking if submitted archive has all formal requirement
 - compilation with make
 
 
-## TODO
+# merlin_test.sh
+
+WORK IN PROGRESS - use at your own risk
+
+This script will copy archive to merlin with is_it_ok.sh and run it there. It will also create testdir if it does not exist in user home directory (that's where the files are copied). This dir can be edited inside the script in varriable `TESTDIR`.
+
+It supports password authentication (it will take login from filename) and ssh key authentication if second argument is provided with ssh profile.
+
+## Usage
+
+- Usage: ./merlin_test.sh  ARCHIVE  \[SSH_PROFILE\]
+  - ARCHIVE - the filename of archive to check
+  - SSH_PROFILE - ssh profile for merlin - optional
+
+
+# IPK-is_it_ok.sh
+
+TODO
+
+# IAL-is_it_ok.sh
+
+TODO
+
+
+# TODO
 
 - [ ] config file for each assignment
   - [ ] checking correct binary name
@@ -28,7 +52,6 @@ This script is used for checking if submitted archive has all formal requirement
 - [ ] checking if files have correct headers
 - [ ] checking contents of README
 - [ ] checking contents of manual.pdf
-- [ ] auto-testing on merlin
 - [ ] other subjects (IPK, IAL, etc...)
-
+- [x] automatic testing on merlin
 
